@@ -34,12 +34,13 @@ export default function Form()
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"
                 onChange={handleChange}
                 name="firstName"
+                className="form--input"
                 value={formData.firstName}
             />
             <input
@@ -48,6 +49,7 @@ export default function Form()
                 onChange={handleChange}
                 name="lastName"
                 value={formData.lastName}
+                className="form--input"
             />
             <input
                 type="email"
@@ -55,12 +57,14 @@ export default function Form()
                 onChange={handleChange}
                 name="email"
                 value={formData.email}
+                className="form--input"
             />
             <textarea
                 value={formData.comments}
                 placeholder="Comments"
                 onChange={handleChange}
                 name="comments"
+                className="form--input"
             />
             <input
                 type="checkbox"
@@ -112,7 +116,7 @@ export default function Form()
 
             <label htmlFor="favColor">What is your favorite color?</label>
             <br />
-            <select
+            <select className="form--input"
                 id="favColor"
                 value={formData.favColor}
                 onChange={handleChange}
@@ -128,7 +132,7 @@ export default function Form()
             </select>
             <br />
             <br />
-            <button>Submit</button>
+            <button className="form--submit">Submit</button>
         </form>
     );
 }
